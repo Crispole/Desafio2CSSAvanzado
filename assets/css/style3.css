@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h3 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 100%;
+    background-color: #e7e7e7;
+    border: 2px solid #000;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 10% 1fr 10%; /*100px 1fr 100px*/
+    grid-template-areas:
+        "header header header header"
+        "aside products products products"
+        "footer footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #586A6A;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 100px;
+    font-size: 30px;
+}
+
+.aside {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside span {
+    color: #818D92;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: products;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.card img {
+    width: 170px;
+    height: 200px;
+}
+
+button {
+    width: 100%;
+    background-color: #B9A394;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #586A6A;
+}
+
+button:hover {
+    background-color: #DAD4EF;
+    color: #fff;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #C2ADB0;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    justify-content: center;
+}
